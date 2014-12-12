@@ -1,5 +1,5 @@
 
-# Mathematically structured computer programs
+### Mathematically structured computer programs
 
 Slides for a talk to undergraduates given on 2011-02-28 introducting the idea of structuring a program with mathematics. The goal was to motivate and understand the category theory behind this small Haskell program
 
