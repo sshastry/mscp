@@ -3,6 +3,9 @@
 
 Slides for a talk to undergraduates given on 2011-02-28 introducting the idea of structuring a program with mathematics. The goal was to motivate and understand the category theory behind this small Haskell program
 
+This link will render the pdf file in this repository in your browser. See [here](http://webapps.stackexchange.com/questions/48061/can-i-trick-github-into-displaying-the-pdf-in-the-browser-instead-of-downloading) for the explanation.
+* [mscp.pdf](http://sshastry.github.io/mscp/mscp.pdf)
+
 ```haskell
 import System.Environment
 
