@@ -28,27 +28,7 @@
         </ul>
       </header>
       <section>
-        <h2>
-<a id="mathematically-structured-computer-programs" class="anchor" href="#mathematically-structured-computer-programs" aria-hidden="true"><span class="octicon octicon-link"></span></a>Mathematically structured computer programs</h2>
-
-<p>Slides for a talk to undergraduates given on 2011-02-28 introducting the idea of structuring a program with mathematics. The goal was to motivate and understand the category theory behind this small Haskell program</p>
-
-<div class="highlight highlight-haskell"><pre><span class="pl-k">import</span> <span class="pl-s3">System.Environment</span>
-
-<span class="pl-en">liftM</span>           <span class="pl-k">::</span> (<span class="pl-e">Monad</span> <span class="pl-vo">m</span>) <span class="pl-k">=&gt;</span> (<span class="pl-vo">a</span> <span class="pl-k">-&gt;</span> <span class="pl-vo">b</span>) <span class="pl-k">-&gt;</span> <span class="pl-vo">m</span> <span class="pl-vo">a</span> <span class="pl-k">-&gt;</span> <span class="pl-vo">m</span> <span class="pl-vo">b</span>
-liftM f t       = t &gt;&gt;= (\y -&gt; <span class="pl-s3">return</span> (f y))
-
-<span class="pl-en">q</span>               <span class="pl-k">::</span> (<span class="pl-e">Ord</span> <span class="pl-vo">a</span>) <span class="pl-k">=&gt;</span> [<span class="pl-vo">a</span>]<span class="pl-k">-&gt;</span>[<span class="pl-vo">a</span>]
-q <span class="pl-c1">[]</span>            = <span class="pl-c1">[]</span>
-q (x:xs)        = q [y|y&lt;-xs,y&lt;x] ++ [x] ++ q [y|y&lt;-xs,y&gt;=x]
-
-main = (liftM q) getArgs &gt;&gt;= <span class="pl-s3">print</span></pre></div>
-
-<p>The slides give a brief introduction to category theory, monads, the list and state monads, and then in a handwavy way introduce the IO monad as a sort of state monad.</p>
-
-<p>In the slides I wrote "Imagine trying to prove a theorem of mathematics which involves functions which are not well defined!" This is overly simplistic and conflates imperative with side-effecting. There is a big difference between imperative and impure. For instance one can go to any treatment of algorithms such as <a href="http://mitpress.mit.edu/books/introduction-algorithms">Cormen et al</a> or <a href="http://www.amazon.com/Algorithm-Design-Jon-Kleinberg/dp/0321295358">Kleinberg and Tardos</a> and find many mathematical theorems proved about what are for the most part pure functions written in an imperative style, notably making heavy use of destructive in place update.</p>
-
-<p>Some of the students liked the idea that category theoretic ideas could be used to program a computer, and some just thought it was weird.</p>
+        <p><a href="https://github.com/sshastry/mscp">https://github.com/sshastry/mscp</a></p>
       </section>
       <footer>
         <p>This project is maintained by <a href="https://github.com/sshastry">sshastry</a></p>
